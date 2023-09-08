@@ -10,9 +10,9 @@ Currently, two official plugins are available:
 it is a web movie application that requires user login(username and password or google login) to access movies
 # Technology used
 Vite + React
-Tailwind
-firebase 
-material UI
-The movie Database Api
-#link
+-Tailwind
+-firebase 
+-material UI
+-The movie Database Api
+# link
 movibez.netlify.app
