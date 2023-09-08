@@ -15,4 +15,4 @@ Vite + React
 -material UI
 -The movie Database Api
 # link
-movibez.netlify.app
+Url :https://movibez.netlify.app/
