@@ -8,7 +8,7 @@ const Confirmed = () => {
 
     useEffect(()=>{
       const transitionTimeout = setTimeout(() => {
-        navigate("/home");
+        navigate("/login");
       }, 3000);
       return () => clearTimeout(transitionTimeout);
     },[navigate])

@@ -23,7 +23,7 @@ function Login() {
       const user = userCredential.user;
       localStorage.setItem("token", user.accessToken);
       localStorage.setItem("user", JSON.stringify(user));
-      navigate("/proccesing");
+      navigate("/Home");
     } catch (error) {
       console.log(error);
     }
@@ -37,7 +37,7 @@ function Login() {
           <img src={logo_icon} alt="logo_icon" />
           <img src={logo} alt="logo" />
         </div>
-        <h1 className="text-[24px] text-[#fff] font-[500]">Welcome back,</h1>
+        <h1 className="text-[24px] text-[#fff] font-[500]">Welcome back</h1>
         <p className="text-[#BABABA] font-[500] text-[14px]">
           Welcome back! Please enter your details.
         </p>

@@ -9,8 +9,12 @@ const GoogleSingin = () => {
 
   const signInWithGoogle = async () => {
     try {
-      await signInWithPopup(auth, provider);
-      navigate("/proccesing");
+     const userCredential= await signInWithPopup(auth, provider);
+     console.log(userCredential);
+      const user = userCredential.user;
+      localStorage.setItem("token", user.accessToken);
+      localStorage.setItem("user", JSON.stringify(user));
+      navigate("/Home");
     } catch (error) {
       console.error(error);
     }

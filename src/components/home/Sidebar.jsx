@@ -5,10 +5,22 @@ import SmartDisplayOutlinedIcon from "@mui/icons-material/SmartDisplayOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import Ticket_Confirmed from "/src/assets/Ticket Confirmed.svg";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../config/firebase";
+import { signOut } from "firebase/auth";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const logOut = async ()=>{
+    try {
+      await signOut(auth)
+      navigate("/login")
+    } catch (error) {
+      console.error(error);
+    }
+  }
   return (
-    <main className="rounded-r-3xl bg-[#212121] flex flex-col justify-center items-center w-[200px] h-max ">
+    <main className="rounded-r-3xl bg-[#212121] flex flex-col justify-center items-center w-[200px] h-screen ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="80"
@@ -70,7 +82,9 @@ const Sidebar = () => {
           Start Playing
         </button>
       </section>
-      <button className="text-[#666666] text=[12px] font-[poppins] flex justify-center items-center mt-3 mb-3">
+      <button
+       onClick={logOut}
+       className="text-[#666666] text=[12px] font-[poppins] flex justify-center items-center mt-3 mb-3">
         <LogoutOutlinedIcon fontSize="small" />
         Log Out
       </button>

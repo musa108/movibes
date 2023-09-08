@@ -3,19 +3,20 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 
+
 const RightBar = () => {
   return (
     <main className="">
-      <div className="flex justify-center items-center gap-4">
+      <div className="flex justify-center items-center gap-2">
         <div className="bg-[#212121] rounded-full text-[12px] p-3">
           <NotificationsOutlinedIcon color="success" />
         </div>
         <img className="rounded-full w-[50px] h-[50px]" src="" alt="" />
       </div>
-      <div className=" mt-2 ">
+      <div className="  ">
           <div className=" flex justify-center items-center gap-4">
             <h3 className="font-medium text-[#fff]">Categories</h3>
-            <p className="text-[14px] text-[#666666]">Uncheck all</p>
+            <p className="text-[14px] text-[#666666] font-medium">Uncheck all</p>
           </div>
           <ul className="bg-[#666666] bg-opacity-30 rounded-2xl p-2 font-[poppins] font-medium mt-4">
             <li className="flex justify-between items-center text-[#fff] text-[14px] p-1 border-b-2 border-[#666666]">
@@ -41,7 +42,7 @@ const RightBar = () => {
 
           <div className=" flex justify-center items-center gap-6 mt-4">
             <h3 className="font-medium text-[#fff]">Services</h3>
-            <p className="text-[14px] text-[#666666]">Uncheck all</p>
+            <p className="text-[14px] text-[#666666] font-medium">Uncheck all</p>
           </div>
           <ul className="bg-[#666666] bg-opacity-30 rounded-2xl p-2 font-[poppins] font-medium mt-4">
             <li className="flex justify-between items-center text-[#fff] text-[14px] p-1 border-b-2 border-[#666666]">

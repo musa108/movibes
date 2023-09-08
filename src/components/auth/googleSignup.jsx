@@ -9,18 +9,22 @@ const GoogleSignup = () => {
 
   const signUpWithGoogle = async () => {
     try {
-      await signInWithPopup(auth, provider);
+     const userCredential= await signInWithPopup(auth, provider);
+     console.log(userCredential);
+      const user = userCredential.user;
+      localStorage.setItem("token", user.accessToken);
+      localStorage.setItem("user", JSON.stringify(user));
       navigate("/proccesing");
     } catch (error) {
       console.error(error);
     }
   };
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <button
       onClick={signUpWithGoogle}
         className=" w-[250px] p-2 bg-[#000] border border-[#7B7B7B]
-           rounded-md mt-5 flex justify-center ml-[7.7rem] items-center gap-1 text-[#fff] text-[14px]"
+           rounded-md mt-5 items-center gap-1 text-[#fff] text-[14px]"
       >
         <GoogleIcon color="primary" />
         Sign Up With Google
